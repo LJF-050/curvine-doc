@@ -6,8 +6,8 @@ This chapter provides an in-depth introduction to Curvine's technical architectu
 
 Curvine adopts a layered distributed architecture design that ensures clear component responsibilities with excellent scalability and high availability. The entire architecture is primarily divided into three layers: **control layer** (Master), **storage layer** (Workers), and **access layer** (clients: FUSE, SDK, CLI, S3 gateway), which collaborate to complete data storage, processing, and management tasks.
 
-Curvine consists of three main server-side roles plus clients and UFS:
-![mount-arch](./img/curvine.png)
+Curvine consists of several main modules as shown in the architecture diagram:
+![curvine_new](./img/curvine_new.png)
 
 **Curvine Client**: Data read/write operations are implemented by the client, which calls Curvine server-side interfaces through RPC (metadata from Master, block data from Workers). The client supports multiple access methods:
 
